@@ -63,11 +63,13 @@ python3 app.py
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
-
+## Website Video
 https://github.com/abdul-28930/hackathon/assets/51827927/dfb6b0ee-8fd1-425d-a07e-83c2442aaeb5
 
-
+## Model Demo
 https://github.com/abdul-28930/hackathon/assets/51827927/c5d8bbac-9471-4b58-ba49-0c03b7f62532
+
+## Training Images
 
 ![img8](https://github.com/abdul-28930/hackathon/assets/51827927/bb59abb0-15a4-4b20-96a1-58fd6ebfc437)
 ![img9](https://github.com/abdul-28930/hackathon/assets/51827927/6bbef1b7-9da2-4dcf-8151-d0fd8b051c07)
