@@ -14,10 +14,11 @@ Would allow the administrate to plan their future choices with sustainability, t
 - Direction towards net zero carbon footprint
 - Increase Carbon absorption
 - Increase O2 production
+<br>
 - Estimation will work on the criteria by segmenting image into major 3 parts:
-- Total area covered by trees
-- Total area covered by Buildings / Construction
-- Total area that can be used for plantation
+ - Total area covered by trees
+ - Total area covered by Buildings / Construction
+ - Total area that can be used for plantation
 
 ## Tech Stack
 
