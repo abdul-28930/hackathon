@@ -1,4 +1,4 @@
-# CSustainaVerse
+# SustainaVerse
 **Product Developed for CresCon 2024 Hackathon** 
 
 # Project Title
