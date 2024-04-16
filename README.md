@@ -16,8 +16,11 @@ Would allow the administrate to plan their future choices with sustainability, t
 - Increase O2 production
 <br>
 Estimation will work on the criteria by segmenting image into major 3 parts:
+<br>
 - Total area covered by trees
+<br>
 - Total area covered by Buildings / Construction
+<br>
 - Total area that can be used for plantation
 
 ## Tech Stack
