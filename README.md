@@ -8,6 +8,8 @@ web application that will aid the administrate with visual display of their own 
 planning with sustainable development utilising satellite imagery to detect trees within a specified 
 area and estimates the potential carbon absorption of that tree cover.
 
+# !!!!Only JPEG OR JPG Images are allowed!!!!
+
 ## Description
 
 Would allow the administrate to plan their future choices with sustainability, that will result in 
@@ -25,7 +27,6 @@ Estimation will work on the criteria by segmenting image into major 3 parts:
 
 ## Tech Stack
 
-# !!!!Only JPEG OR JPG Images are allowed!!!!
 - Python (Flask)
 - HTML
 - CSS
