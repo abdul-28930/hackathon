@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="/static/upload.css">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+        <div class="container">
+            <div class="d-flex flex-column justify-content-center w-100 h-100">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+                        <div class="panel">
+                            <div class="button_outer">
+                                <div class="btn_upload">
+                                    <input type="file" id="upload_file" name="upload_file">
+                                    Upload Image
+                                </div>
+                                <div class="processing_bar"></div>
+                                <div class="success_box"></div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="error_msg"></div>
+                    <div class="uploaded_file_view" id="uploaded_view">
+                        <!-- Image will be appended here -->
+                        <span class="file_remove">X</span>
+                    </div>
+                    <div id="btns" class="btns">
+                        <!-- <button class="send_button">send</button> -->
+                    </div>
+                    <button style="display: none;" class="send_button">Send</button> <!-- Move the send button outside -->
+                    <div class="feedback_msg"></div> <!-- Add a div for feedback messages -->
+                </div>
+            </div>
+        </div>
+
+
+        <div id="progress" class="progress">
+            <div class="box">
+            </div>
+          </div>   
+
+            <section   class="product section container" id="products">
+               
+
+                <p style="font-size: 1.8rem;" class="product__description">
+                   
+                </p>
+
+                <div class="product__container grid">
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="{{ url_for('uploaded_file', filename='comapre.jpg') }}" id="result-1" src="" alt="" class="product__img">
+
+                        <h3 class="product__title">Comparison Plot</h3>
+
+
+                        <!-- <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i>
+                        </button> -->
+                    </article>
+
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="{{ url_for('uploaded_file', filename='gis_0.jpg') }}" id="result-2" src="" alt="" class="product__img">
+
+                        <h3 class="product__title">Buildings Total Area</h3>
+
+
+                        <!-- <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i>
+                        </button> -->
+                    </article>
+
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="{{ url_for('uploaded_file', filename='gis_1.jpg') }}" id="result-3" src="" alt="" class="product__img">
+
+                        <h3 class="product__title">Extra Spaces Available</h3>
+                        <!-- <span class="product__price">$7.99</span> -->
+
+                        <!-- <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i>
+                        </button> -->
+                    </article>
+
+                   
+
+
+                  
+
+                   
+                </div>
+                <article class="product__card">
+                    <div class="product__circle"></div>
+    
+                    <img src="{{ url_for('uploaded_file', filename='gis_2.jpg') }}" id="result-3" src="" alt="" class="product__img">
+    
+                    <h3 class="product__title">Total Tree Area</h3>
+                    <!-- <span class="product__price">$7.99</span> -->
+    
+                    <!-- <button class="button--flex product__button">
+                        <i class="ri-shopping-bag-line"></i>
+                    </button> -->
+                </article>
+
+               
+            </section>
+
+
+
+
+
+           
+              
+
+          
+
+    <script>
+
+var btnUpload = $("#upload_file"),
+		btnOuter = $(".button_outer");
+	btnUpload.on("change", function(e){
+		var ext = btnUpload.val().split('.').pop().toLowerCase();
+		if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
+			$(".error_msg").text("Not an Image...");
+		} else {
+			$(".error_msg").text("");
+			btnOuter.addClass("file_uploading");
+			setTimeout(function(){
+				btnOuter.addClass("file_uploaded");
+                if ($("#uploaded_view").find(".send_button").length === 0) {
+                $("#btns").append('<button class="send_button">Send</button>');
+                attachSendButtonListener(); 
+            }
+			},3000);
+			var uploadedFile = URL.createObjectURL(e.target.files[0]);
+			setTimeout(function(){
+				$("#uploaded_view").append('<img src="'+uploadedFile+'" />').addClass("show");
+			},3500);
+		}
+	});
+
+    function attachSendButtonListener() {
+    // Remove existing event listeners
+    $(document).off("click", ".send_button");
+
+    $(document).on("click", ".send_button", function(e) {
+        $
+    var uploadedFile = $('#upload_file')[0].files[0];
+    if (uploadedFile) {
+        var formData = new FormData();
+        formData.append('upload_file', uploadedFile);
+
+        fetch('/upload', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json(); // Extract the response text
+            } else {
+                throw new Error('Failed to send file.'); // Throw an error for non-successful responses
+            }
+        })
+        .then(data => {
+            console.log('Server response:', data); // Log the server response
+
+            document.querySelector('.product__description').textContent = data.sugestion;
+            // Display a success message to the user
+            $(".success_msg").text("File sent successfully!");
+            $(".error_msg").text("");
+            displayResultSection()
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Display an error message to the user
+            $(".error_msg").text("Failed to send file to the server.");
+            // Clear any previous success messages
+            $(".success_msg").text("");
+        });
+    }
+});
+    }
+
+    function displayResultSection() {
+    $('.progress').show(); // Show the progress bar while images are loading
+
+    // Check if all images are loaded
+    var imagesLoaded = 0;
+    var totalImages = 3; // Total number of images to load
+    var checkAllImagesLoaded = function() {
+        imagesLoaded++;
+        if (imagesLoaded === totalImages) {
+            // All images are loaded
+            $('#progress').hide(); // Hide the progress bar
+            $('#products').show(); // Show the section containing the images
+        }
+    };
+
+    // Check each image's availability
+    checkImageAvailability(document.getElementById('result-1'), checkAllImagesLoaded);
+
+    checkImageAvailability(document.getElementById('result-2'), checkAllImagesLoaded);
+
+    checkImageAvailability(document.getElementById('result-3'), checkAllImagesLoaded);
+
+
+  
+}
+
+function checkImageAvailability(imgElement, callback) {
+    if (imgElement.complete) {
+        // Image already loaded
+        callback();
+    } else {
+        // Image not loaded yet, set onload event
+        imgElement.onload = callback;
+    }
+}
+
+
+    function closePreview() {
+    $("#uploaded_view").removeClass("show");
+    $("#uploaded_view").find("img").remove();
+    btnOuter.removeClass("file_uploading");
+    btnOuter.removeClass("file_uploaded");
+}
+
+	$(".file_remove").on("click", function(e){
+		closePreview();
+        $(".send_button").remove(); 
+	});
+
+    $(document).ready(function() {
+        $('.progress').hide();
+    // Hide the result section initially
+    $('#products').hide();
+
+    // Event listener for the send button click
+    $('#sendButton').click(function() {
+        // Call the function to display the result section
+        displayResultSection();
+    });
+});
+    </script>
+</body>
+</html>

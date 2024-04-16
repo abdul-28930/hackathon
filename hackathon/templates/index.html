@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="/static/logo.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="/static/styles.css">
+
+        <title>Hackathon</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <!-- <a href="#" class="nav__logo">
+                    <img src="/static/logo.png" alt="">
+                </a> -->
+                
+                <div style="display: flex;">
+                    
+                    <img  class="img-logo" src="/static/logo_light.png" alt="">
+                        <p class="brand-name">OXYGEN ORCHARD</p>
+                </div>
+                <!-- <p>OXYGEN ORCHARD</p> -->
+
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#products" class="nav__link">Products</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#faqs" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#demo" class="nav__link">Demo</a>
+                        </li>
+                       
+                    </ul>
+<!-- 
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div> -->
+                    
+                </div>
+                <div class="model-upload nav__link nav__item">
+                    <button onclick="window.location.href='/model'" class="model-upload-btn">Try Our Model</button>
+                </div>
+
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+                </div>
+
+
+                
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <img src="/static/home.jpg" alt="" class="home__img">
+
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Open Source <br> GIS Solution for 
+                        </h1>
+                        <h1 class="home__description">
+                            
+                           Carbon Absorption Rate
+                        </h1>
+                        <a href="#about" class="button button--flex">
+                            Explore <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__social">
+                        <span class="home__social-follow">Follow Us</span>
+
+                        <div class="home__social-links">
+                            <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section container" id="about">
+                <div class="about__container grid">
+                    <img src="/static/section1.jpg" alt="" class="about__img">
+
+                    <div class="about__data">
+                        <h2 class="section__title about__title">
+                            Who we really are?
+                        </h2>
+
+                        <p class="about__description">
+                            Group of 5 Friends trying <br> 
+                            to make the world a better place.
+                        </p>
+                        
+                        <a href="#" class="button--link button--flex">
+                            Try Our Model<i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== STEPS ====================-->
+            <section class="steps section container">
+                <div class="steps__bg">
+                    <h2 class="section__title-center steps__title">
+                        Steps to estimate Co2 absorption <br> and O2 emission
+                    </h2>
+
+                    <div class="steps__container grid">
+                        <div class="steps__card">
+                            <div class="steps__card-number">01</div>
+                            <h3 class="steps__card-title">Upload Satellite Image</h3>
+                            <p class="steps__card-description">
+                                Provide a high-resolution satellite image of your area.  We'll identify suitable <br> sites for tree planting.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">02</div>
+                            <h3 class="steps__card-title">Receive Analysis Results</h3>
+                            <p class="steps__card-description">
+                                We'll analyze building carbon emissions and suggest potential tree planting areas.
+                            </p>
+                        </div>
+
+                        <div class="steps__card">
+                            <div class="steps__card-number">03</div>
+                            <h3 class="steps__card-title">Plan Your Green Space</h3>
+                            <p class="steps__card-description">
+                                Use our recommendations to plan tree planting, including the number of trees and suitable species.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PRODUCTS ====================-->
+            <section class="product section container" id="products">
+               
+
+                <p class="product__description">
+                    We're developing a machine learning model that analyzes satellite imagery to predict CO2 emissions. The model then offers tailored recommendations for reducing emissions, based on the identified patterns and factors influencing CO2 production. Our goal is to provide actionable insights to mitigate environmental impact and promote sustainability.
+                </p>
+
+                <div class="product__container grid">
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="/static/Satellite.jpeg" alt="" class="product__img">
+
+                        <h3 class="product__title">Satellite Image</h3>
+
+
+                        <!-- <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i>
+                        </button> -->
+                    </article>
+
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="/static/boundingbox.jpeg" alt="" class="product__img">
+
+                        <h3 class="product__title">Bounding</h3>
+
+
+                        <!-- <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i>
+                        </button> -->
+                    </article>
+
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="/static/imagesegmentation.jpeg" alt="" class="product__img">
+
+                        <h3 class="product__title">Image Segmentation</h3>
+                        <!-- <span class="product__price">$7.99</span> -->
+
+                        <!-- <button class="button--flex product__button">
+                            <i class="ri-shopping-bag-line"></i>
+                        </button> -->
+                    </article>
+
+
+                  
+
+                   
+                </div>
+            </section>
+
+            <div id="demo" class="demo-tuto">
+                <div class="head1">
+                    <h2 class="head1">Step 1</h2>
+                </div>
+                <div class="para1">
+                    <p>No Registration or Login is Required</p>
+                </div>
+                <div class="para2">
+                    <p>Upload a Satellite Image of your desired Area.</p>
+                </div>
+                <div class="head2">
+                    <h2 class="head2">Step 2</h2>
+                </div>
+                <div class="head3">
+                    <h2 class="head3">Step 3</h2>
+                </div>
+                <div class="para3">
+                    <p>Click the Upload Button and we will analyze and present the the estimated total tree canopy area and the corresponding potential carbon absorption in tonnes </p>
+                </div>
+                <div class="para4">
+                    <p>For more accurate results, consider using high-resolution satellite images with a clear view of the tree canopy.</p>
+                </div>
+                <div class="head4">
+                    <h2 class="head4">Points to Remember</h2>
+                </div>
+            </div>
+
+
+            <!--==================== QUESTIONS ====================-->
+            <section class="questions section" id="faqs">
+                <h2 class="section__title-center questions__title container">
+                    Some common questions <br> were often asked
+                </h2>
+
+                <div class="questions__container container grid">
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    My flowers are falling off or dying?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Plants are easy way to add color energy and transform your 
+                                    space but which planet is for you. Choosing the right plant.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    What causes leaves to become pale?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Plants are easy way to add color energy and transform your 
+                                    space but which planet is for you. Choosing the right plant.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    What causes brown crispy leaves?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Plants are easy way to add color energy and transform your 
+                                    space but which planet is for you. Choosing the right plant.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How do i choose a plant?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Plants are easy way to add color energy and transform your 
+                                    space but which planet is for you. Choosing the right plant.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    How do I change the pots?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Plants are easy way to add color energy and transform your 
+                                    space but which planet is for you. Choosing the right plant.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Why are gnats flying around my plant?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Plants are easy way to add color energy and transform your 
+                                    space but which planet is for you. Choosing the right plant.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== CONTACT ====================-->
+         
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">
+                        <i class="ri-leaf-line footer__logo-icon"></i> Oxygen Orchard
+                    </a>
+
+                    <h3 class="footer__title">
+                        HAVE ANY QUERIES  <br> CONNECT WITH US
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        <input type="email" placeholder="Your email" class="footer__input">
+
+                        <button class="button button--flex footer__button">
+                            Connect
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Team Members</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Abdul Salam</li>
+                        <li class="footer__information">Akshay Prasad</li>
+                        <li class="footer__information">Farhan</li>
+                        <li class="footer__information">Mohammed Mafaz</li>
+                        <li class="footer__information">Mohammed Hamdan</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">+91 9150984174</li>
+                        
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/" class="footer__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" class="footer__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer__content">
+                    <h3 class="footer__title">
+                        We accept all credit cards
+                    </h3>
+
+                    <div class="footer__cards">
+                        <img src="assets/img/card1.png" alt="" class="footer__card">
+                        <img src="assets/img/card2.png" alt="" class="footer__card">
+                        <img src="assets/img/card3.png" alt="" class="footer__card">
+                        <img src="assets/img/card4.png" alt="" class="footer__card">
+                    </div>
+                </div> -->
+            </div>
+
+            <p class="footer__copy">&#169; Oxygen Orchard. All rigths reserved</p>
+        </footer>
+        
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="/static/scrollreveal.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="/static/main.js"></script>
+    </body>
+</html>
