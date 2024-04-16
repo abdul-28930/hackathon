@@ -11,13 +11,13 @@ area and estimates the potential carbon absorption of that tree cover.
 ## Description
 
 Would allow the administrate to plan their future choices with sustainability, that will result in 
-• Direction towards net zero carbon footprint 
-• Increase Carbon absorption 
-• Increase O2 production
-Estimation will work on the criteria by segmenting image into major 3 parts:
-• Total area covered by trees
-• Total area covered by Buildings / Construction
-• Total area that can be used for plantation
+- Direction towards net zero carbon footprint
+- Increase Carbon absorption
+- Increase O2 production
+- Estimation will work on the criteria by segmenting image into major 3 parts:
+- Total area covered by trees
+- Total area covered by Buildings / Construction
+- Total area that can be used for plantation
 
 ## Tech Stack
 
