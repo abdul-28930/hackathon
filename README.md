@@ -45,14 +45,19 @@ Python3 or Python app.py
 
 **Abdul Salam M**
 [@abdul-28930](https://github.com/abdul-28930)
+<br>
 **Akshay Prashad M K**
 [@Akshay-Prashad](https://github.com/Akshay-Prashad)
+<br>
 **Farhan M**
 [@FarhanIbrahim03](https://github.com/FarhanIbrahim03)
+<br>
 **Muhammad Mafaz**
 [@Mafaz03](https://github.com/Mafaz03)
+<br>
 **Muhammad Hamdan**
 [@Hamdan0712](https://github.com/Hamdan0712)
+<br>
 
 ## License
 
