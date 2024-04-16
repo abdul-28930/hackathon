@@ -25,6 +25,7 @@ Estimation will work on the criteria by segmenting image into major 3 parts:
 
 ## Tech Stack
 
+# !!!!Only JPEG OR JPG Images are allowed!!!!
 - Python (Flask)
 - HTML
 - CSS
