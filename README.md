@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 ```
 cd hackathon
-Python3 or Python app.py
+python3 app.py
 ```
 
 ## Authors
