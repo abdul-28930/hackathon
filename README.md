@@ -37,6 +37,7 @@ pip install -r requirements.txt
 ### Executing program
 
 ```
+cd hackathon
 python3 app.py
 ```
 
